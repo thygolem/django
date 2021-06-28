@@ -1,0 +1,32 @@
+# Use postgres/example user/password credentials
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/django
+    ports:
+      - 8000:8000
+    image: app:django
+    container_name: django_container
+    command: python manage.py runserver 0.0.0.0:8000
+#    depends_on:
+#      - db
+
+
+      
+#    db:
+#      container_name: postgresdb
+#      image: 'postgres:latest'
+#      restart: always
+#      ports:
+#        - 5432:5432
+#
+#    environment:
+#      - POSTGRES_DB=postgres
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#
+#    volumes:
+#      - ./data/postgresdb:/var/lib/postgresql/data
+
