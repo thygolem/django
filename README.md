@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=aMqs_y6dZw4&t=801s
 
 
 $ docker-compose build
+(va a construir la imagen en función de la configuración de Dockerfile)
 
 $ docker-compose run --rm app django-admin startproject core .
 
