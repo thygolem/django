@@ -1,6 +1,5 @@
 # django
-Stack de Django y PostgreSQL con docker
-DJANGO DOCKER POSTGRESQL REDIS REACTJS
+Stack de Django y PostgreSQL con docker Redis ReactJS
 
 https://www.youtube.com/watch?v=aMqs_y6dZw4&t=801s
 
