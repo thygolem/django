@@ -17,3 +17,5 @@ Coniene instalar la extensión Live Serverritwickdey.liveserver de VSCODE para o
 $ docker-compose up
 
 
+$ docker exec -it djangoapp /bin/bash
+(Entrar en el contendor; "djangoapp" es el nombre del contenedor)
