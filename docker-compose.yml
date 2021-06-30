@@ -24,7 +24,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./data/postgresdb:/var/lib/postgresql/data 
-    image: mysql:5.7
+#    image: mysql:5.7
 #    environment:
 #      MYSQL_DATABASE: 'django-app-db'
 #      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
