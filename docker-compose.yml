@@ -13,20 +13,20 @@ services:
     depends_on:
       - db     
   db:
-#    container_name: postgresdb
-#    image: 'postgres:latest'
-#    restart: always
-#    ports:
-#      - 5432:5432
-#    environment:
-#      - POSTGRES_DB=postgres
-#      - POSTGRES_USER=postgres
-#      - POSTGRES_PASSWORD=postgres
-#    volumes:
-#      - ./data/postgresdb:/var/lib/postgresql/data
-    image: mysql:5.7
+    container_name: postgresdb
+    image: 'postgres:latest'
+    restart: always
+    ports:
+      - 5432:5432
     environment:
-      MYSQL_DATABASE: 'django-app-db'
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     volumes:
-      - ./data/mysqldb:/var/lib/mysql
+      - ./data/postgresdb:/var/lib/postgresql/data 
+    image: mysql:5.7
+#    environment:
+#      MYSQL_DATABASE: 'django-app-db'
+#      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+#    volumes:
+#      - ./data/mysqldb:/var/lib/mysql
