@@ -10,23 +10,23 @@ services:
     ports:
       - 8002:8002
     command: python manage.py runserver 0.0.0.0:8002
-#    depends_on:
-#      - db
-
-
-      
-#    db:
-#      container_name: postgresdb
-#      image: 'postgres:latest'
-#      restart: always
-#      ports:
-#        - 5432:5432
-#
+    depends_on:
+      - db     
+  db:
+#    container_name: postgresdb
+#    image: 'postgres:latest'
+#    restart: always
+#    ports:
+#      - 5432:5432
 #    environment:
 #      - POSTGRES_DB=postgres
 #      - POSTGRES_USER=postgres
 #      - POSTGRES_PASSWORD=postgres
-#
 #    volumes:
 #      - ./data/postgresdb:/var/lib/postgresql/data
-
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'django-app-db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    volumes:
+      - ./data/mysqldb:/var/lib/mysql
